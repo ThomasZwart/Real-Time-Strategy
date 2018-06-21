@@ -9,10 +9,6 @@ public class PlayerSelectionScript : MonoBehaviour {
     private static Vector3 mouseDownPoint;
     private static Vector3 mouseUpPoint;
     public static bool userIsDragging;
-
-
-    // Use this for initialization
-    private GameObject UI;
     RaycastHit hit;
 
 
