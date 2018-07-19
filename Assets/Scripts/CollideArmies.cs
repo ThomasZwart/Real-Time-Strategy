@@ -26,7 +26,7 @@ public class CollideArmies : MonoBehaviour {
                 cityStats.Update_Citystats();
                 Destroy(myArmyStats.gameObject);
             }
-            else
+            else // TODO enemy city collision
             {
 
             }
@@ -38,6 +38,7 @@ public class CollideArmies : MonoBehaviour {
             
             if (enemyArmyStats.playerNumber == myArmyStats.playerNumber) // Own Team collision
             {
+                // spawnNumber < spawnNumber is so that the collision only gets done once, because this method is being invoked on both objects
                 if (enemyArmyStats.spawnNumber < myArmyStats.spawnNumber && !myArmyStats.inBattle && !enemyArmyStats.inBattle)
                     OwnTeamCollision(collision);
 
